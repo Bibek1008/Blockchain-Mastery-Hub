@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 263 70% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 263 70% 50%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+}
+
+@keyframes pulse-nft {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(236, 72, 153, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 8px rgba(236, 72, 153, 0.2);
+  }
+}
+
+@keyframes pulse-zk {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(249, 115, 22, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 8px rgba(249, 115, 22, 0.2);
+  }
+}
+
+.pulse-aptos {
+  animation: pulse-aptos 2s ease-in-out infinite;
+}
+
+.pulse-defi {
+  animation: pulse-defi 2s ease-in-out infinite;
+}
+
+.pulse-nft {
+  animation: pulse-nft 2s ease-in-out infinite;
+}
+
+.pulse-zk {
+  animation: pulse-zk 2s ease-in-out infinite;
+}
+
+/* Category-specific shimmer effects */
+@keyframes shimmer-aptos {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes shimmer-defi {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes shimmer-nft {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes shimmer-zk {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-aptos {
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer-aptos 3s ease-in-out infinite;
+}
+
+.shimmer-defi {
+  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer-defi 3s ease-in-out infinite;
+}
+
+.shimmer-nft {
+  background: linear-gradient(90deg, transparent, rgba(236, 72, 153, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer-nft 3s ease-in-out infinite;
+}
+
+.shimmer-zk {
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer-zk 3s ease-in-out infinite;
+}
+
+/* Mobile-first responsive design helpers */
+@media (max-width: 640px) {
+  .mobile-padding {
+    @apply px-4 py-2;
+  }
+  
+  .mobile-text {
+    @apply text-sm;
+  }
+  
+  .mobile-button {
+    @apply py-4 px-6 text-base;
+  }
+  
+  .card-mobile-responsive {
+    @apply p-4;
+  }
+
+  .card-header-mobile-responsive {
+    @apply p-4 pb-2;
+  }
+
+  .card-content-mobile-responsive {
+    @apply p-4 pt-0;
+  }
+
+  .card-title-mobile-responsive {
+    @apply text-xl;
+  }
+
+  .header-mobile-responsive {
+    @apply h-14;
+  }
+
+  .header-logo-mobile-responsive {
+    @apply h-8;
+  }
+
+  .header-countdown-mobile-responsive {
+    @apply text-xs;
+  }
+
+  .wallet-button-mobile-responsive {
+    @apply py-2 px-3 text-sm;
+  }
+
+  .quiz-option-mobile-responsive {
+    @apply p-3 text-base;
+  }
+
+  .quiz-timer-mobile-responsive {
+    @apply py-3;
+  }
+
+  .quiz-question-mobile-responsive {
+    @apply text-lg;
+  }
+}
+
+/* --- Custom avant-garde layout primitives for the redesign --- */
+@layer components {
+  /* Layered cosmic mesh background that blends multiple gradients */
+  .mesh-bg {
+    @apply bg-hero-gradient bg-cosmic-veil relative overflow-hidden;
+    background-blend-mode: screen, normal;
+  }
+  .mesh-bg::after {
+    content: "";
+    position: absolute; inset: -20% -10% -10% -20%;
+    pointer-events: none;
+    background:
+      radial-gradient(800px 400px at 10% 15%, rgba(124, 248, 255, 0.03), transparent 60%),
+      radial-gradient(700px 350px at 90% 85%, rgba(199, 240, 0, 0.03), transparent 60%),
+      conic-gradient(from 180deg at 50% 50%, rgba(255,255,255,0.02) 0deg, rgba(255,255,255,0) 140deg);
+    mask-image: radial-gradient(1200px 800px at 50% 50%, black 40%, transparent 75%);
+    mix-blend-mode: lighten;
+  }
+
+  /* Orbit layout to arrange chips along circular paths */
+  .orbit {
+    position: relative;
+    perspective: 800px;
+  }
+  .orbit-ring {
+    position: absolute; inset: 0; border-radius: 9999px;
+    background: conic-gradient(from 0deg, rgba(255,255,255,0.02), rgba(255,255,255,0) 30%, rgba(255,255,255,0.02));
+    filter: blur(0.5px);
+    animation: orbit-spin 18s linear infinite;
+  }
+  .orbit-item { position: absolute; transform: translate(-50%, -50%) rotate(var(--angle)) translateX(var(--radius)); }
+  .orbit-item > * { transform: rotate(calc(-1 * var(--angle))); }
+
+  @keyframes orbit-spin { to { transform: rotate(360deg); } }
+
+  /* Irregular squircle containers using clip-path for organic feel */
+  .squircle {
+    -webkit-clip-path: path('M0.5 0.25 C0.2 0.25, 0.25 0.1, 0.5 0.1 C0.75 0.1, 0.8 0.25, 0.5 0.25 C0.2 0.25, 0.25 0.9, 0.5 0.9 C0.75 0.9, 0.8 0.75, 0.5 0.75 C0.2 0.75, 0.25 0.25, 0.5 0.25 Z');
+            clip-path: path('M0.5 0.25 C0.2 0.25, 0.25 0.1, 0.5 0.1 C0.75 0.1, 0.8 0.25, 0.5 0.25 C0.2 0.25, 0.25 0.9, 0.5 0.9 C0.75 0.9, 0.8 0.75, 0.5 0.75 C0.2 0.75, 0.25 0.25, 0.5 0.25 Z');
+  }
+
+  /* Animated ribbons crossing the viewport */
+  .ribbon {
+    position: absolute; inset-inline: -20vw; height: 12px; opacity: 0.08;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+    filter: blur(3px);
+    animation: ribbon-move 14s ease-in-out infinite;
+  }
+  .ribbon:nth-child(2) { height: 8px; opacity: 0.06; animation-duration: 18s; animation-direction: reverse; }
+  .ribbon:nth-child(3) { height: 16px; opacity: 0.04; animation-duration: 22s; }
+  @keyframes ribbon-move {
+    0% { transform: translateX(-10%) translateY(-20px) rotate(5deg); }
+    50% { transform: translateX(10%) translateY(10px) rotate(-2deg); }
+    100% { transform: translateX(-10%) translateY(-20px) rotate(5deg); }
+  }
+
+  /* Glassy elevated panel with accent inner border */
+  .panel-glass {
+    @apply bg-white/5 border border-white/10 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.2)];
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+  }
+  .panel-glass-aptos { @apply panel-glass shadow-aptos-primary/20; }
+  .panel-glass-defi { @apply panel-glass shadow-defi-primary/20; }
+  .panel-glass-nft { @apply panel-glass shadow-nft-primary/20; }
+  .panel-glass-zk { @apply panel-glass shadow-zk-primary/20; }
+
+  /* Magnetic button with subtle scale + shadow pull */
+  .btn-magnetic {
+    @apply relative inline-flex items-center justify-center rounded-2xl px-5 py-3 font-semibold text-white transition-transform duration-200;
+  }
+  .btn-magnetic::before {
+    content: ""; position: absolute; inset: -4px; border-radius: 1.25rem; opacity: .15;
+    background: var(--btn-bg, linear-gradient(135deg, #7A00FF, #00F0FF)); filter: blur(4px);
+    z-index: -1; transition: opacity .2s ease;
+  }
+  .btn-magnetic:hover { transform: translateY(-1px) scale(1.02); }
+  .btn-magnetic:hover::before { opacity: .25; }
+}
+
+/* Heading typography that departs from common UI kits */
+@layer base {
+  .display-hero {
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 800; letter-spacing: -0.04em; line-height: 0.95;
+  }
+  .display-sub {
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-weight: 500; letter-spacing: 0.02em;
+  }
+}
