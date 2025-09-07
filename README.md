@@ -2,6 +2,24 @@
 
 A comprehensive blockchain education platform featuring interactive quizzes, educational resources, and YouTube learning videos. Test your knowledge across 10 different blockchain categories and enhance your understanding of decentralized technologies.
 
+<img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/05494d6a-1086-4694-81d4-adf05ef9fa0a" />
+
+<img width="1679" height="898" alt="image" src="https://github.com/user-attachments/assets/7368c8d7-bb99-4ad3-a78a-da05c6094198" />
+
+<img width="1210" height="904" alt="image" src="https://github.com/user-attachments/assets/1a6919fa-ef54-488a-baee-65760c9b8271" />
+
+<img width="884" height="879" alt="image" src="https://github.com/user-attachments/assets/3202f4fd-87fb-4845-9988-ed3f8dee6067" />
+
+<img width="975" height="909" alt="image" src="https://github.com/user-attachments/assets/00078ba1-5bc7-4348-8e64-f69682011d3b" />
+
+<img width="1456" height="921" alt="image" src="https://github.com/user-attachments/assets/5bc79735-d18a-46a2-8130-e974e0446723" />
+
+<img width="1445" height="917" alt="image" src="https://github.com/user-attachments/assets/194945cf-55bf-4944-9e5e-beb1e8064360" />
+
+<img width="1316" height="460" alt="image" src="https://github.com/user-attachments/assets/6d16cbe7-cdf6-4fe9-b636-010f3f66b414" />
+
+
+
 ## 🌟 Features
 
 ### 📚 Quiz Categories
